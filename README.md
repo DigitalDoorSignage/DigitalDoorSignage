@@ -1,5 +1,6 @@
 # DigitalDoorSignage
-The repository for the syp project digital_door_signage 2018/19
+
+This project is about a digital door sign (e-paper) that can be used to display who is currently in the classroom and for how long. (this is a vague description since we are still not sure how and what to display)
 
 # Issue Workflow
 
@@ -14,6 +15,11 @@ The repository for the syp project digital_door_signage 2018/19
 9. Wait for everyone to review and eventually accept your solution
 10. Merge the branch with the "Squash and Merge" option and use the id of the issue as the name
 11. Delete the branch online and local
+
+# Team
+
+* [Stefan Waldl](https://github.com/StefanWaldl)
+* [Tim Untersberger](https://github.com/TimUntersberger)
 
 # Useful Resources
 
