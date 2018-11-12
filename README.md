@@ -2,6 +2,11 @@
 
 This project is about a digital door sign (e-paper) that can be used to display who is currently in the classroom and for how long. (this is a vague description since we are still not sure how and what to display)
 
+# Documents
+
+* [Entity Relationship Diagram](documents/DigitalDoorSignageERD.png)
+* [Use Case Diagram](documents/DigitalDoorSignageUCD.png)
+
 # Issue Workflow
 
 1. Copy the id of the issue you want to work on
@@ -23,10 +28,7 @@ This project is about a digital door sign (e-paper) that can be used to display 
 
 # Useful Resources
 
-[Commit message guide](https://chris.beams.io/posts/git-commit/)
-
-[ERD tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
-
-[ERD relationship cheatsheet](https://www.vivekmchawla.com/erd-crows-foot-relationship-symbols-cheat-sheet/)
-
-[SQL naming convention](https://www.xaprb.com/blog/2008/10/26/the-power-of-a-good-sql-naming-convention/)
+* [Commit message guide](https://chris.beams.io/posts/git-commit/)
+* [ERD tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+* [ERD relationship cheatsheet](https://www.vivekmchawla.com/erd-crows-foot-relationship-symbols-cheat-sheet/)
+* [SQL naming convention](https://www.xaprb.com/blog/2008/10/26/the-power-of-a-good-sql-naming-convention/)
