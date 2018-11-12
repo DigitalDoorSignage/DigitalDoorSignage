@@ -25,6 +25,8 @@ This project is about a digital door sign (e-paper) that can be used to display 
 
 [Commit message guide](https://chris.beams.io/posts/git-commit/)
 
-[ERD Tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+[ERD tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
 
-[ERD Relationship Cheatsheet](https://www.vivekmchawla.com/erd-crows-foot-relationship-symbols-cheat-sheet/)
+[ERD relationship cheatsheet](https://www.vivekmchawla.com/erd-crows-foot-relationship-symbols-cheat-sheet/)
+
+[SQL naming convention](https://www.xaprb.com/blog/2008/10/26/the-power-of-a-good-sql-naming-convention/)
