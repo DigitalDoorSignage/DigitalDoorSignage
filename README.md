@@ -14,3 +14,7 @@ The repository for the syp project digital_door_signage 2018/19
 9. Wait for everyone to review and eventually accept your solution
 10. Merge the branch with the "Squash and Merge" option and use the id of the issue as the name
 11. Delete the branch online and local
+
+# Useful Resources
+
+[Commit message guide](https://chris.beams.io/posts/git-commit/)
