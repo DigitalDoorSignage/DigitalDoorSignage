@@ -1,4 +1,4 @@
-package at.htl.entities;
+package at.htl.persistence.entities;
 
 public class Teacher {
     private Integer teacherId;

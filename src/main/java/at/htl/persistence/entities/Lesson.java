@@ -1,7 +1,8 @@
-package at.htl.entities;
+package at.htl.persistence.entities;
 
 public class Lesson {
     private Integer lessonId;
+    private Room room;
     private Integer roomId;
     private Integer teacherId;
 
@@ -9,8 +10,7 @@ public class Lesson {
     public Lesson() {
     }
 
-    public Lesson(Integer lessonId, Integer roomId, Integer teacherId) {
-        this.lessonId = lessonId;
+    public Lesson(Integer roomId, Integer teacherId) {
         this.roomId = roomId;
         this.teacherId = teacherId;
     }
