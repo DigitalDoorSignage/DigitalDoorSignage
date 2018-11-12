@@ -24,3 +24,4 @@ This project is about a digital door sign (e-paper) that can be used to display 
 # Useful Resources
 
 [Commit message guide](https://chris.beams.io/posts/git-commit/)
+[ERD Tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
