@@ -1,8 +1,13 @@
 package at.htl.persistence.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Lesson {
+    @Id
     private Integer lessonId;
-    private Room room;
+    //private Room room;
     private Integer roomId;
     private Integer teacherId;
 
