@@ -16,13 +16,14 @@ This project is about a digital door sign (e-paper) that can be used to display 
 4. Add a new datasource with the mysql preset and following data:
   ```
   Name = DigitalDoorSignageDS
-  JNDI Name = java:/DigitalDoorSignageDS
+  JNDI Name = java:jboss/datasources/DigitalDoorSignageDS
   Driver Name = <your mysql connector>
   Connection URL = jdbc:mysql://localhost:3306/digital_door_signage?createDatabaseIfNotExist=true
   User Name = root
   Password = root
   ```
 5. Make sure to test the connection!
+6. Restart the project if you started the wildfly server from an ide
 
 
 # Issue Workflow
