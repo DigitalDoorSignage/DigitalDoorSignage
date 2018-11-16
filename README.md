@@ -2,7 +2,7 @@
 
 This project is about a digital door sign (e-paper) that can be used to display who is currently in the classroom and for how long. (this is a vague description since we are still not sure how and what to display)
 
-# Table of content
+# Table of Contents
 
 * [Documents](#documents)
 * [Project setup](#project-setup)
