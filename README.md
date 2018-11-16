@@ -8,6 +8,7 @@ This project is about a digital door sign (e-paper) that can be used to display 
 * [Use Case Diagram](documents/DigitalDoorSignageUCD.png)
 
 # Project setup
+You only have to do the project setup after cloning the project.
 
 ## Configure wildfly
 1. Download the [mysql jdbc driver](https://dev.mysql.com/downloads/connector/j/) (Choose the platform independent version)
