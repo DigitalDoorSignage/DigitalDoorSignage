@@ -14,12 +14,14 @@ This project is about a digital door sign (e-paper) that can be used to display 
 2. Extract the tar/zip file into a folder (e.g. /opt)
 3. Start Wildfly and upload the mysql connector jar file as a new deployment with the name "mysql-connector"
 4. Add a new datasource with the mysql preset and following data:
-  * Name = DigitalDoorSignageDS
-  * JNDI Name = java:/DigitalDoorSignageDS
-  * Driver Name = <your mysql connector>
-  * Connection URL = jdbc:mysql://localhost:3306/digital_door_signage?createDatabaseIfNotExist=true
-  * User Name = root
-  * Password = root
+  ```
+  Name = DigitalDoorSignageDS
+  JNDI Name = java:/DigitalDoorSignageDS
+  Driver Name = <your mysql connector>
+  Connection URL = jdbc:mysql://localhost:3306/digital_door_signage?createDatabaseIfNotExist=true
+  User Name = root
+  Password = root
+  ```
 5. Make sure to test the connection!
 
 
