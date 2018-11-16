@@ -2,6 +2,17 @@
 
 This project is about a digital door sign (e-paper) that can be used to display who is currently in the classroom and for how long. (this is a vague description since we are still not sure how and what to display)
 
+# Table of content
+
+* [Documents](#documents)
+* [Project setup](#project-setup)
+  * [Configure wildfly](#configure-wildfly)
+* [Development setup](#development-setup)
+  * [Docker-compose](#docker-compose)
+* [Issue workflow](#issue-workflow)
+* [Team](#team)
+* [Useful resources](#useful-resources)
+
 # Documents
 
 * [Entity Relationship Diagram](documents/DigitalDoorSignageERD.png)
