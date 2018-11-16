@@ -4,7 +4,7 @@ This project is about a digital door sign (e-paper) that can be used to display 
 
 # Table of Contents
 
-* [Documents](#documents)
+* [Documentation](#documentation)
 * [Project setup](#project-setup)
   * [Configure wildfly](#configure-wildfly)
 * [Development setup](#development-setup)
@@ -13,7 +13,7 @@ This project is about a digital door sign (e-paper) that can be used to display 
 * [Team](#team)
 * [Useful resources](#useful-resources)
 
-# Documents
+# Documentation
 
 * [Entity Relationship Diagram](documents/DigitalDoorSignageERD.png)
 * [Use Case Diagram](documents/DigitalDoorSignageUCD.png)
