@@ -15,7 +15,8 @@ public class Lesson {
     public Lesson() {
     }
 
-    public Lesson(Integer roomId, Integer teacherId) {
+    public Lesson(Integer lessonId, Integer roomId, Integer teacherId) {
+        this.lessonId = lessonId;
         this.roomId = roomId;
         this.teacherId = teacherId;
     }
@@ -24,6 +25,10 @@ public class Lesson {
     //region Getters and Setters
     public Integer getLessonId() {
         return lessonId;
+    }
+
+    public void setLessionId(Integer lessonId){
+        this.lessonId = lessonId;
     }
 
     public Integer getRoomId() {
