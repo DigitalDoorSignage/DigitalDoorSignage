@@ -26,6 +26,17 @@ You only have to do the project setup after cloning the project.
 5. Make sure to test the connection!
 6. Restart the project if you started the wildfly server from an ide
 
+# Development setup
+You have to make sure that you have done everything before starting to develop else some things might not work.
+
+## Docker-compose
+The following command starts all the services needed by the project. 
+
+``` bash
+docker-compose up -d
+```
+
+Make sure to add the '-d' at the end to tell docker-compose to start the container in the deamon mode.
 
 # Issue Workflow
 
