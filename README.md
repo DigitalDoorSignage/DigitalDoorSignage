@@ -7,6 +7,22 @@ This project is about a digital door sign (e-paper) that can be used to display 
 * [Entity Relationship Diagram](documents/DigitalDoorSignageERD.png)
 * [Use Case Diagram](documents/DigitalDoorSignageUCD.png)
 
+# Project setup
+
+## Configure wildfly
+1. Download the [mysql jdbc driver](https://dev.mysql.com/downloads/connector/j/) (Choose the platform independent version)
+2. Extract the tar/zip file into a folder (e.g. /opt)
+3. Start Wildfly and upload the mysql connector jar file as a new deployment with the name "mysql-connector"
+4. Add a new datasource with the mysql preset and following data:
+  * Name = DigitalDoorSignageDS
+  * JNDI Name = java:/DigitalDoorSignageDS
+  * Driver Name = <your mysql connector>
+  * Connection URL = jdbc:mysql://localhost:3306/digital_door_signage?createDatabaseIfNotExist=true
+  * User Name = root
+  * Password = root
+5. Make sure to test the connection!
+
+
 # Issue Workflow
 
 1. Copy the id of the issue you want to work on
