@@ -35,7 +35,7 @@ You only have to do the project setup after cloning the project.
   Password = root
   ```
 5. Make sure to test the connection!
-6. Restart the project if you started the wildfly server from an ide
+6. Restart the project if you started the wildfly server from an IDE
 
 # Development setup
 You have to make sure that you have done everything before starting to develop else some things might not work.
@@ -47,7 +47,7 @@ The following command starts all the services needed by the project.
 docker-compose up -d
 ```
 
-Make sure to add the '-d' at the end to tell docker-compose to start the container in the deamon mode.
+Make sure to add the '-d' at the end to tell docker-compose to start the containers in the deamon mode.
 
 # Issue Workflow
 
