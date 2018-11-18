@@ -1,6 +1,7 @@
 package at.htl.persistence.dao;
 
 import at.htl.persistence.entity.Lesson;
+import at.htl.persistence.entity.Room;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -10,29 +11,25 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Stateless
-public class LessonDao{
+public class RoomDao {
 
     @PersistenceContext(name = "primaryPU")
     EntityManager em;
 
-    public void create(Lesson lesson) {
-        em.persist(lesson);
-        if(lesson.getRoom() != null)
-            em.persist(lesson.getRoom());
-        if(lesson.getTeacher() != null)
-            em.persist(lesson.getTeacher());
+    @Transactional
+    public void create(Room room) {
+        em.persist(room);
         em.flush();
     }
-
-    public List<Lesson> getAll(){
+    public List<Room> getAll(){
         return em
-                .createNamedQuery("Lesson.getAll", Lesson.class)
+                .createNamedQuery("Room.getAll", Room.class)
                 .getResultList();
     }
-    public Lesson getById(Integer id){
+    public Room getById(Integer id){
         try {
             return em
-                    .createNamedQuery("Lesson.getById", Lesson.class)
+                    .createNamedQuery("Room.getById", Room.class)
                     .setParameter("id", id)
                     .getSingleResult();
         } catch(NoResultException ex){
@@ -40,13 +37,4 @@ public class LessonDao{
         }
     }
 
-    public void update(Lesson lesson) {
-        em.merge(lesson);
-        em.flush();
-    }
-
-    public void delete(Integer id) {
-        em.remove(getById(id));
-        em.flush();
-    }
 }

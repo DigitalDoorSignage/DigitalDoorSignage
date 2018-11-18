@@ -1,4 +1,4 @@
-package at.htl.rest.endpoints;
+package at.htl.rest.endpoint;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

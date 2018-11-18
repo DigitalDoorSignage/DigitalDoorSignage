@@ -1,11 +1,14 @@
-package at.htl.persistence.entities;
+package at.htl.persistence.entity;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Entity
-@XmlRootElement
+@NamedQueries({
+        @NamedQuery(name="Room.getAll", query="select room from Room room"),
+        @NamedQuery(name="Room.getById", query="select room from Room room where room.id = :id")
+})
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Room_Seq")
@@ -28,6 +31,10 @@ public class Room {
     //region Getters and Setters
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id){
+        this.id = id;
     }
 
     public String getName() {
