@@ -23,10 +23,15 @@ public class LessonDao{
             em.persist(lesson.getTeacher());
         em.flush();
     }
-    public List<Lesson> read(){
+    public List<Lesson> getAll(){
         return em
                 .createNamedQuery("Lesson.findAll", Lesson.class)
                 .getResultList();
+    }
+    public Lesson getById(Integer id){
+        return em
+                .createNamedQuery("Lesson.findById", Lesson.class)
+                .getSingleResult();
     }
 
 }

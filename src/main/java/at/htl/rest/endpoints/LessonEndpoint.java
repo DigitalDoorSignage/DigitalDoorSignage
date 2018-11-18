@@ -10,7 +10,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Path("lesson")
 public class LessonEndpoint {
@@ -19,17 +18,28 @@ public class LessonEndpoint {
     LessonDao lessonDao;
 
     @GET
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public List<LessonDto> getAllLessons(){
         return lessonDao
-                .read()
+                .getAll()
                 .stream()
                 .map(Lesson::toDto)
                 .collect(Collectors.toList());
     }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
+    public LessonDto getLessonById(@PathParam("id") Integer id){
+        return lessonDao
+                .getById(id)
+                .toDto();
+    }
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response createLesson(Lesson lesson){
         if(lesson == null)
             return Response
@@ -42,5 +52,6 @@ public class LessonEndpoint {
                 .status(Response.Status.CREATED)
                 .build();
     }
+
 
 }
