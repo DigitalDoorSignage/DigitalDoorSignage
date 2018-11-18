@@ -1,50 +1,72 @@
 package at.htl.persistence.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import at.htl.rest.dto.LessonDto;
+
+import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name="Lesson.findAll", query = "select lesson from Lesson lesson"),
+        @NamedQuery(name="Lesson.findById", query = "select lesson from Lesson lesson where lesson.id = :lessonId")
+})
 public class Lesson {
     @Id
-    private Integer lessonId;
-    //private Room room;
-    private Integer roomId;
-    private Integer teacherId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Lesson_Seq")
+    @SequenceGenerator(name = "Lesson_Seq", sequenceName = "Lesson_Seq")
+    private Integer id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Room room;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Teacher teacher;
+
+    public LessonDto toDto(){
+        LessonDto dto = new LessonDto();
+        dto.setId(id);
+        if(teacher != null)
+            dto.setTeacherId(teacher.getId());
+        if(room != null)
+            dto.setRoomId(room.getId());
+        return dto;
+    }
 
     //region Constructors
     public Lesson() {
     }
 
-    public Lesson(Integer lessonId, Integer roomId, Integer teacherId) {
-        this.lessonId = lessonId;
-        this.roomId = roomId;
-        this.teacherId = teacherId;
+    public Lesson(Integer id, Room room, Teacher teacher) {
+        this.id = id;
+        this.room = room;
+        this.teacher = teacher;
     }
+
     //endregion
 
     //region Getters and Setters
-    public Integer getLessonId() {
-        return lessonId;
+    public Integer getId() {
+        return id;
     }
 
     public void setLessionId(Integer lessonId){
-        this.lessonId = lessonId;
+        this.id = lessonId;
     }
 
-    public Integer getRoomId() {
-        return roomId;
+    public Room getRoom() {
+        return room;
     }
 
-    public void setRoomId(Integer roomId) {
-        this.roomId = roomId;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
-    public Integer getTeacherId() {
-        return teacherId;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setTeacherId(Integer teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
+
     //endregion
 }

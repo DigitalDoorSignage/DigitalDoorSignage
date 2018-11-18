@@ -3,7 +3,7 @@ package at.htl.persistence.entities;
 import java.time.LocalDateTime;
 
 public class Unit {
-    private Integer unitId;
+    private Integer id;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
 
@@ -12,15 +12,15 @@ public class Unit {
     }
 
     public Unit(Integer unitId, LocalDateTime startTime, LocalDateTime endTime) {
-        this.unitId = unitId;
+        this.id = unitId;
         this.startTime = startTime;
         this.endTime = endTime;
     }
     //endregion
 
     //region Getters and Setters
-    public Integer getUnitId() {
-        return unitId;
+    public Integer getId() {
+        return id;
     }
 
     public LocalDateTime getStartTime() {

@@ -1,7 +1,7 @@
 package at.htl.persistence.entities;
 
 public class Subject {
-    private Integer subjectId;
+    private Integer id;
     private String name;
 
     //region Constructors
@@ -9,14 +9,14 @@ public class Subject {
     }
 
     public Subject(Integer subjectId, String name) {
-        this.subjectId = subjectId;
+        this.id = subjectId;
         this.name = name;
     }
     //endregion
 
     //region Getters and Setters
-    public Integer getSubjectId() {
-        return subjectId;
+    public Integer getId() {
+        return id;
     }
 
     public String getName() {

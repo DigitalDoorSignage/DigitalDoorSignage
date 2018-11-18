@@ -2,20 +2,31 @@ package at.htl.persistence.dao;
 
 import at.htl.persistence.entities.Lesson;
 
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
+import javax.transaction.Transactional;
+import java.util.List;
 
 @Stateless
-public class LessonDao {
+public class LessonDao{
 
-    @PersistenceContext(name = "primaryPU", type = PersistenceContextType.EXTENDED)
+    @PersistenceContext(name = "primaryPU")
     EntityManager em;
 
-    public void create(Lesson lesson){
-        this.em.persist(lesson);
+    @Transactional
+    public void create(Lesson lesson) {
+        em.persist(lesson);
+        if(lesson.getRoom() != null)
+            em.persist(lesson.getRoom());
+        if(lesson.getTeacher() != null)
+            em.persist(lesson.getTeacher());
+        em.flush();
     }
+    public List<Lesson> read(){
+        return em
+                .createNamedQuery("Lesson.findAll", Lesson.class)
+                .getResultList();
+    }
+
 }
