@@ -16,7 +16,7 @@ public class Teacher {
     @SequenceGenerator(name = "Teacher_Seq", sequenceName = "Teacher_Seq")
     private Integer id;
     private String lastName;
-    private Boolean is_male;
+    private Boolean isMale;
     @OneToMany
     private List<Lesson> lessons;
 
@@ -35,16 +35,14 @@ public class Teacher {
         dto.setId(id);
         if(lastName != null)
             dto.setLastName(lastName);
-        if(is_male != null)
-            dto.setIsMale(is_male);
+        if(isMale != null)
+            dto.setIsMale(isMale);
         return dto;
     }
 
     public void update(TeacherDto teacherDto) {
-        if(teacherDto.getLastName() != null)
-            this.lastName = teacherDto.getLastName();
-        if(teacherDto.getIsMale() != null)
-            this.is_male = teacherDto.getIsMale();
+        this.lastName = teacherDto.getLastName();
+        this.isMale = teacherDto.getIsMale();
     }
 
     //region Getters and Setters
@@ -64,12 +62,12 @@ public class Teacher {
         this.lastName = name;
     }
 
-    public Boolean getIs_male() {
-        return is_male;
+    public Boolean getIsMale() {
+        return isMale;
     }
 
-    public void setIs_male(Boolean is_male) {
-        this.is_male = is_male;
+    public void setIsMale(Boolean is_male) {
+        this.isMale = is_male;
     }
 
     public void setLessons(List<Lesson> lessons) {
