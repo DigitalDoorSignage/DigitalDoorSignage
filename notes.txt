@@ -1,0 +1,11 @@
+!!! This file is temporary. All information listed here should be added in the github page. !!!
+
+When creating an EntityDao class make sure to annotate the class with @Stateless, since wildfly can only automate the transaction handling for you if the class is stateless.
+If you don't annotate it with @Stateless you will have to begin a transaction and close it after doing some work (e.q. persisting) yourself.
+
+IMPORTANT!!! If you, for whatever reason, set the type of the persistence context to extended, it won't work.
+I wasted a lot of time trying to fix this shit when I only had to remove the type specification in the @PersistenceContext.
+Please don't be an idiot like me.
+
+When trying to use an EntityDao object inside another class (e.q. api endpoint), you will have to annotate the declaration with @Inject.
+This is needed since wildfly doesn't automatically know what to inject.
