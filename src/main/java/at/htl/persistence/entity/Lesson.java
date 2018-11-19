@@ -38,6 +38,8 @@ public class Lesson {
     public LessonDto toDto(){
         LessonDto dto = new LessonDto();
         dto.setId(id);
+        if(subject != null)
+            dto.setSubjectId(subject.getId());
         if(teacher != null)
             dto.setTeacherId(teacher.getId());
         if(room != null)

@@ -1,16 +1,17 @@
 package at.htl.persistence.dao;
 
-import at.htl.persistence.entity.Teacher;
+import at.htl.persistence.entity.Unit;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Stateless
-public class TeacherDao extends Dao<Teacher>{
+public class UnitDao extends Dao<Unit> {
 
-    @PersistenceContext(name = "primaryPU")
-    EntityManager em;
+    @PersistenceContext(name = "primaryDb")
+    private EntityManager em;
+
 
     @Override
     protected EntityManager getEntityManager() {
@@ -18,7 +19,7 @@ public class TeacherDao extends Dao<Teacher>{
     }
 
     @Override
-    protected Class<Teacher> getEntityClass() {
-        return Teacher.class;
+    protected Class<Unit> getEntityClass() {
+        return Unit.class;
     }
 }

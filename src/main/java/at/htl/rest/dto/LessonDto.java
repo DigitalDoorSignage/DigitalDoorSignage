@@ -7,16 +7,18 @@ public class LessonDto {
     private Integer id;
     private Integer roomId;
     private Integer teacherId;
+    private Integer subjectId;
     private Integer weekday;
 
     //region Constructors
     public LessonDto() {
     }
 
-    public LessonDto(Integer id, Integer roomId, Integer teacherId, Integer weekday) {
+    public LessonDto(Integer id, Integer roomId, Integer teacherId, Integer subjectId, Integer weekday) {
         this.id = id;
         this.roomId = roomId;
         this.teacherId = teacherId;
+        this.subjectId = subjectId;
         this.weekday = weekday;
     }
     //endregion
@@ -52,6 +54,14 @@ public class LessonDto {
 
     public void setWeekday(Integer weekday) {
         this.weekday = weekday;
+    }
+
+    public Integer getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(Integer subjectId) {
+        this.subjectId = subjectId;
     }
     //endregion
 }
