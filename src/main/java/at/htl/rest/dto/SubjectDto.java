@@ -7,6 +7,7 @@ public class SubjectDto {
     private Integer id;
     private String name;
 
+    //region Constructors
     public SubjectDto() {
     }
 
@@ -14,7 +15,9 @@ public class SubjectDto {
         this.id = id;
         this.name = name;
     }
+    //endregion
 
+    //region Getter and Setter
     public Integer getId() {
         return id;
     }
@@ -30,4 +33,5 @@ public class SubjectDto {
     public void setName(String name) {
         this.name = name;
     }
+    //endregion
 }

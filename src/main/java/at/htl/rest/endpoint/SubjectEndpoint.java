@@ -6,7 +6,9 @@ import at.htl.persistence.entity.Subject;
 import at.htl.rest.dto.SubjectDto;
 
 import javax.inject.Inject;
+import javax.ws.rs.Path;
 
+@Path("subject")
 public class SubjectEndpoint extends EntityEndpoint<Subject, SubjectDto> {
     @Inject
     SubjectDao subjectDao;

@@ -8,7 +8,9 @@ import at.htl.persistence.entity.Room;
 import at.htl.rest.dto.RoomDto;
 
 import javax.inject.Inject;
+import javax.ws.rs.Path;
 
+@Path("room")
 public class RoomEndpoint extends EntityEndpoint<Room, RoomDto> {
 
     @Inject

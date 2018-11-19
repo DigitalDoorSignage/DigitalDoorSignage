@@ -6,7 +6,9 @@ import at.htl.persistence.entity.Unit;
 import at.htl.rest.dto.UnitDto;
 
 import javax.inject.Inject;
+import javax.ws.rs.Path;
 
+@Path("unit")
 public class UnitEndpoint extends EntityEndpoint<Unit, UnitDto> {
     @Inject
     UnitDao unitDao;

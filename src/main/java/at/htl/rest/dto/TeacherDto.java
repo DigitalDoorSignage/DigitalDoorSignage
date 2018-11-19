@@ -5,15 +5,21 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class TeacherDto {
     private Integer id;
-    private String last_name;
-    private Boolean is_male;
+    private String lastName;
+    private Boolean isMale;
 
-    public TeacherDto(Integer id, String last_name, Boolean is_male) {
-        this.id = id;
-        this.last_name = last_name;
-        this.is_male = is_male;
+    //region Constructors
+    public TeacherDto() {
     }
 
+    public TeacherDto(Integer id, String lastName, Boolean isMale) {
+        this.id = id;
+        this.lastName = lastName;
+        this.isMale = isMale;
+    }
+    //endregion
+
+    //region Getter and Setter
     public Integer getId() {
         return id;
     }
@@ -22,19 +28,20 @@ public class TeacherDto {
         this.id = id;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public Boolean getIs_male() {
-        return is_male;
+    public Boolean getIsMale() {
+        return isMale;
     }
 
-    public void setIs_male(Boolean is_male) {
-        this.is_male = is_male;
+    public void setIsMale(Boolean isMale) {
+        this.isMale = isMale;
     }
+    //endregion
 }

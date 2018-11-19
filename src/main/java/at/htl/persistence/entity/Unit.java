@@ -32,18 +32,14 @@ public class Unit {
     public UnitDto toDto(){
         UnitDto dto = new UnitDto();
         dto.setId(id);
-        if(startTime != null)
-            dto.setStartTime(startTime);
-        if(endTime != null)
-            dto.setEndTime(endTime);
+        dto.setStartTime(startTime);
+        dto.setEndTime(endTime);
         return dto;
     }
 
     public void update(UnitDto unitDto) {
-        if(unitDto.getEndTime() != null)
-            this.endTime = unitDto.getEndTime();
-        if(unitDto.getStartTime() != null)
-            this.startTime = unitDto.getStartTime();
+        this.endTime = unitDto.getEndTime();
+        this.startTime = unitDto.getStartTime();
     }
     //region Getters and Setters
     public Integer getId() {

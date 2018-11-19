@@ -7,6 +7,7 @@ public class RoomDto {
     private Integer id;
     private String name;
 
+    //region constructor
     public RoomDto() {
     }
 
@@ -14,7 +15,9 @@ public class RoomDto {
         this.id = id;
         this.name = name;
     }
+    //endregion
 
+    //region Getter and Setter
     public Integer getId() {
         return id;
     }
@@ -30,4 +33,5 @@ public class RoomDto {
     public void setName(String name) {
         this.name = name;
     }
+    //endregion
 }
