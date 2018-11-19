@@ -8,6 +8,10 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name="Subject.getAll", query="select subject from Subject subject"),
+        @NamedQuery(name="Subject.getById", query="select subject from Subject subject where subject.id = :id")
+})
 public class Subject {
     @Id
     @SequenceGenerator(name = "Subject_Seq", sequenceName = "Subject_Seq")

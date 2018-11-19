@@ -19,13 +19,4 @@ public class LessonDao extends Dao<Lesson>{
     protected Class<Lesson> getEntityClass(){
         return Lesson.class;
     }
-
-    public void create(Lesson lesson) {
-        em.persist(lesson);
-        if(lesson.getRoom() != null)
-            em.persist(lesson.getRoom());
-        if(lesson.getTeacher() != null)
-            em.persist(lesson.getTeacher());
-        em.flush();
-    }
 }

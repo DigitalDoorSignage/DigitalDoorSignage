@@ -8,6 +8,10 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name="Unit.getAll", query="select unit from Unit unit"),
+        @NamedQuery(name="Unit.getById", query="select unit from Unit unit where unit.id = :id")
+})
 public class Unit {
     @Id
     @SequenceGenerator(sequenceName = "Unit_Seq", name="Unit_Seq")
