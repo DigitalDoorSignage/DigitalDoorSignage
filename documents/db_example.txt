@@ -24,8 +24,8 @@ Lesson_Unit
 
 Teacher
 	teacher_id 0
-	lastName Stuetz
-	isMale 1
+	last_name Stuetz
+	is_male 1
 
 Room
 	room_id 0
