@@ -1,10 +1,8 @@
 package at.htl.rest.endpoint;
 
-import at.htl.persistence.dao.Dao;
-import at.htl.persistence.dao.LessonDao;
-import at.htl.persistence.dao.RoomDao;
-import at.htl.persistence.dao.TeacherDao;
+import at.htl.persistence.dao.*;
 import at.htl.persistence.entity.Lesson;
+import at.htl.persistence.entity.Subject;
 import at.htl.rest.dto.LessonDto;
 
 import javax.inject.Inject;
@@ -23,6 +21,8 @@ public class LessonEndpoint extends EntityEndpoint<Lesson, LessonDto>{
     RoomDao roomDao;
     @Inject
     TeacherDao teacherDao;
+    @Inject
+    SubjectDao subjectDao;
 
     @Override
     protected Dao<Lesson> getEntityDao() {
@@ -41,7 +41,7 @@ public class LessonEndpoint extends EntityEndpoint<Lesson, LessonDto>{
 
     @Override
     protected Lesson updateEntityWithDto(Lesson lesson, LessonDto lessonDto) {
-        lesson.update(lessonDto, roomDao, teacherDao);
+        lesson.update(lessonDto, roomDao, teacherDao, subjectDao);
         return lesson;
     }
 }
