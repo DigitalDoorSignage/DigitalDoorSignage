@@ -44,7 +44,6 @@ public class Teacher {
         this.lastName = teacherDto.getLastName();
         this.isMale = teacherDto.getIsMale();
     }
-
     //region Getters and Setters
     public Integer getId() {
         return id;

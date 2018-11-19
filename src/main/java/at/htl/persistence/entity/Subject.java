@@ -1,5 +1,6 @@
 package at.htl.persistence.entity;
 
+
 import at.htl.rest.dto.SubjectDto;
 import at.htl.rest.dto.UnitDto;
 
@@ -43,6 +44,7 @@ public class Subject {
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;

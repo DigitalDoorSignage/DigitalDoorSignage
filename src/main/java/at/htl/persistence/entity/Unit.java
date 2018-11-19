@@ -3,7 +3,6 @@ package at.htl.persistence.entity;
 import at.htl.persistence.dao.LessonDao;
 import at.htl.rest.dto.RoomDto;
 import at.htl.rest.dto.UnitDto;
-
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
@@ -16,6 +15,7 @@ public class Unit {
     private Integer id;
     private Timestamp startTime;
     private Timestamp endTime;
+
     @ManyToMany
     private List<Lesson> lessons;
 
@@ -29,6 +29,7 @@ public class Unit {
         this.endTime = endTime;
     }
     //endregion
+
     public UnitDto toDto(){
         UnitDto dto = new UnitDto();
         dto.setId(id);
@@ -41,6 +42,7 @@ public class Unit {
         this.endTime = unitDto.getEndTime();
         this.startTime = unitDto.getStartTime();
     }
+
     //region Getters and Setters
     public Integer getId() {
         return id;
