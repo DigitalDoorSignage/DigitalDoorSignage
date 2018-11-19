@@ -1,5 +1,8 @@
 package at.htl.persistence.entity;
 
+import at.htl.rest.dto.SubjectDto;
+import at.htl.rest.dto.UnitDto;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -23,10 +26,26 @@ public class Subject {
         this.name = name;
     }
     //endregion
+    public SubjectDto toDto(){
+        SubjectDto dto = new SubjectDto();
+        dto.setId(id);
+        if(name != null)
+            dto.setName(name);
+        return dto;
+    }
+
+    public void update(SubjectDto subjectDto) {
+        if(subjectDto.getName() != null)
+            this.name = subjectDto.getName();
+    }
 
     //region Getters and Setters
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
