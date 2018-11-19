@@ -23,7 +23,7 @@ public abstract class EntityEndpoint<TEntity, TEntityDto> {
     protected abstract Dao<TEntity> getEntityDao();
     protected abstract Class<TEntity> getEntityClass();
     protected abstract TEntityDto getDtoFromEntity(TEntity entity);
-    protected abstract TEntity updateEntityWithDto(TEntity lesson, TEntityDto dto);
+    protected abstract TEntity updateEntityWithDto(TEntity entity, TEntityDto dto);
 
     @GET
     @Path("/{id}")

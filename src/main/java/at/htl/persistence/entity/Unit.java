@@ -1,5 +1,8 @@
 package at.htl.persistence.entity;
 
+import at.htl.persistence.dao.LessonDao;
+import at.htl.rest.dto.RoomDto;
+import at.htl.rest.dto.UnitDto;
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
@@ -27,9 +30,26 @@ public class Unit {
     }
     //endregion
 
+    public UnitDto toDto(){
+        UnitDto dto = new UnitDto();
+        dto.setId(id);
+        dto.setStartTime(startTime);
+        dto.setEndTime(endTime);
+        return dto;
+    }
+
+    public void update(UnitDto unitDto) {
+        this.endTime = unitDto.getEndTime();
+        this.startTime = unitDto.getStartTime();
+    }
+
     //region Getters and Setters
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Timestamp getStartTime() {

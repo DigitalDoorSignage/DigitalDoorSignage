@@ -2,6 +2,7 @@ package at.htl.persistence.entity;
 
 import at.htl.persistence.converter.WeekdayConverter;
 import at.htl.persistence.dao.RoomDao;
+import at.htl.persistence.dao.SubjectDao;
 import at.htl.persistence.dao.TeacherDao;
 import at.htl.rest.dto.LessonDto;
 import at.htl.rest.util.Weekday;
@@ -49,13 +50,15 @@ public class Lesson {
         return dto;
     }
 
-    public void update(LessonDto lessonDto, RoomDao roomDao, TeacherDao teacherDao) {
+    public void update(LessonDto lessonDto, RoomDao roomDao, TeacherDao teacherDao, SubjectDao subjectDao) {
         if(lessonDto.getWeekday() != null)
             this.weekday = Weekday.from(lessonDto.getWeekday());
         if(lessonDto.getRoomId() != null)
             this.room = roomDao.getById(lessonDto.getRoomId());
         if(lessonDto.getTeacherId() != null)
             this.teacher = teacherDao.getById(lessonDto.getRoomId());
+        if(lessonDto.getSubjectId() != null)
+            this.subject = subjectDao.getById(lessonDto.getSubjectId());
     }
 
     //region Constructors
