@@ -17,6 +17,7 @@ This project is about a digital door sign (e-paper) that can be used to display 
 
 * [Entity Relationship Diagram](documents/DigitalDoorSignageERD.png)
 * [Use Case Diagram](documents/DigitalDoorSignageUCD.png)
+* [System architecture](documents/Systemarchitektur.png)
 
 # Project setup
 You only have to do the project setup after cloning the project.
