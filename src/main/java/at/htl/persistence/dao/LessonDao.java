@@ -12,7 +12,8 @@ public class LessonDao extends Dao<Lesson>{
     @PersistenceContext(name = "primaryPU")
     EntityManager em;
 
-    protected EntityManager getEntityManager(){
+    protected
+    EntityManager getEntityManager(){
         return em;
     }
 
