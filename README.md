@@ -8,7 +8,7 @@
 - [License](#lock-license)
 
 ## Basic - Layout
-![alt text](Documents/Systemarchitektur.png)
+![alt text](documents/Systemarchitektur.png)
 
 ## :arrow_forward: Introduction
  
@@ -17,10 +17,7 @@
 ##  :page_facing_up: Documentation:
 
 Project Documents:
-- [Architektur](Documents/ha_visualisierung.html)
-
-## :microscope: Testing:
-Browser: FireFox Quantum 60.0.2
+- [Architektur](documents/Systemarchitektur.png)
 
 ## :chart_with_upwards_trend: Contributing:
 
