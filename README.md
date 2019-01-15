@@ -25,7 +25,7 @@ Project Documents:
 - Tim Untersberger
 - Stefan Waldl
 
-### [Georg Koeck](https://github.com/gkoe)
+### [G. Koeck](https://github.com/gkoe)
 provided us with the esp32 library and a lot of support for connecting the esp32 with the epaper
 
 School: HTL Leonding
