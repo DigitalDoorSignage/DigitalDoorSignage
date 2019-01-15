@@ -1,77 +1,65 @@
-# DigitalDoorSignage
+# README - DigitalDoorSignage :pushpin:
 
-This project is about a digital door sign (e-paper) that can be used to display who is currently in the classroom and for how long. (this is a vague description since we are still not sure how and what to display)
+## :clipboard: Table of Contents
+- [Introduction](#arrow_forward-introduction)
+- [Documentation](#page_facing_up-documentation)
+- [Contributing](#chart_with_upwards_trend-contributing)
+- [Build with](#wrench-build-with)
+- [License](#lock-license)
 
-# Table of Contents
+## Basic - Layout
+![alt text](Documents/Systemarchitektur.png)
 
-* [Documentation](#documentation)
-* [Project setup](#project-setup)
-  * [Configure wildfly](#configure-wildfly)
-* [Development setup](#development-setup)
-  * [Docker-compose](#docker-compose)
-* [Issue workflow](#issue-workflow)
-* [Team](#team)
-* [Useful resources](#useful-resources)
+## :arrow_forward: Introduction
+ 
+ DigitalDoorSignage is a project about digital signs for schools, that shows which teacher is in the room where it is currently at.
 
-# Documentation
+##  :page_facing_up: Documentation:
 
-* [Entity Relationship Diagram](documents/DigitalDoorSignageERD.png)
-* [Use Case Diagram](documents/DigitalDoorSignageUCD.png)
-* [System architecture](documents/Systemarchitektur.png)
+Project Documents:
+- [Architektur](Documents/ha_visualisierung.html)
 
-# Project setup
-You only have to do the project setup after cloning the project.
+## :microscope: Testing:
+Browser: FireFox Quantum 60.0.2
 
-## Configure wildfly
-1. Download the [mysql jdbc driver](https://dev.mysql.com/downloads/connector/j/) (Choose the platform independent version)
-2. Extract the tar/zip file into a folder (e.g. /opt)
-3. Start Wildfly and upload the mysql connector jar file as a new deployment with the name "mysql-connector"
-4. Add a new datasource with the mysql preset and following data:
-  ```
-  Name = DigitalDoorSignageDS
-  JNDI Name = java:jboss/datasources/DigitalDoorSignageDS
-  Driver Name = <your mysql connector>
-  Connection URL = jdbc:mysql://localhost:3306/digital_door_signage?createDatabaseIfNotExist=true
-  User Name = root
-  Password = root
-  ```
-5. Make sure to test the connection!
-6. Restart the project if you started the wildfly server from an IDE
+## :chart_with_upwards_trend: Contributing:
 
-# Development setup
-You have to make sure that you have done everything before starting to develop else some things might not work.
+### Developers:
+- Tim Untersberger
+- Stefan Waldl
 
-## Docker-compose
-The following command starts all the services needed by the project. 
+### [Georg Koeck](https://github.com/gkoe)
+provided us with the esp32 library and a lot of support for connecting the esp32 with the epaper
 
-``` bash
-docker-compose up -d
-```
+School: HTL Leonding
 
-Make sure to add the '-d' at the end to tell docker-compose to start the containers in the deamon mode.
+## :wrench: Build with:
+- [Webuntis](https://webuntis.com/m)
+- [Mqtt](http://mqtt.org/)
+- [Library for esp32](https://github.com/gkoe/iotsamstag)
+- C++
+- Java EE
 
-# Issue Workflow
+## :lock: License:
 
-1. Copy the id of the issue you want to work on
-2. Create a new branch with id as name
-3. Move the issue to "in progress"
-4. Work on issue
-5. Push branch
-6. Create a pull request on the github website
-7. Add a description (I usually just copy every commit message into the description)
-8. Move the issue to "to verify"
-9. Wait for everyone to review and eventually accept your solution
-10. Merge the branch with the "Squash and Merge" option and use the id of the issue as the name
-11. Delete the branch online and local
+[MIT License](LICENSE)
 
-# Team
+Copyright (c) 2018 Philipp A.
 
-* [Stefan Waldl](https://github.com/StefanWaldl)
-* [Tim Untersberger](https://github.com/TimUntersberger)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-# Useful Resources
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* [Commit message guide](https://chris.beams.io/posts/git-commit/)
-* [ERD tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
-* [ERD relationship cheatsheet](https://www.vivekmchawla.com/erd-crows-foot-relationship-symbols-cheat-sheet/)
-* [SQL naming convention](https://www.xaprb.com/blog/2008/10/26/the-power-of-a-good-sql-naming-convention/)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
