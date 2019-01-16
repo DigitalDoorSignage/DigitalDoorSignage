@@ -12,7 +12,7 @@
 
 ## :arrow_forward: Introduction
  
- DigitalDoorSignage is a project about digital signs for schools, that shows which teacher is in the room where it is currently at.
+ DigitalDoorSignage is a project about a system which displays room the status on an epaper. You can set the room of a sign and it will show you which teacher is teaching which class in which subject.
 
 ##  :page_facing_up: Documentation:
 
@@ -41,7 +41,7 @@ School: HTL Leonding
 
 [MIT License](LICENSE)
 
-Copyright (c) 2018 Philipp A.
+Copyright (c) 2018 Tim U.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
