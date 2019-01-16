@@ -12,7 +12,7 @@
 
 ## Projektstrukturplan
 
-![alt text](documents/Projektstrukturplan.pdf)
+![alt text](documents/Projektstrukturplan.png)
 
 ## :arrow_forward: Introduction
  
