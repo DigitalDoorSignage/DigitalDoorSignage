@@ -14,6 +14,11 @@
 
 ![alt text](documents/Projektstrukturplan.png)
 
+blue = to verify
+green = done
+orange = in progress
+red = open
+
 ## :arrow_forward: Introduction
  
  DigitalDoorSignage is a project about a system which displays room the status on an epaper. You can set the room of a sign and it will show you which teacher is teaching which class in which subject.
