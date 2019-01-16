@@ -12,7 +12,7 @@
 
 ## Projektstrukturplan
 
-![alt text](documents/Projektstrukturplan.png)
+![alt text](documents/Projektstrukturplan2.png)
 
 * blue = to verify
 * green = done
