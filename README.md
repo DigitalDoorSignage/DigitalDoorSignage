@@ -14,10 +14,10 @@
 
 ![alt text](documents/Projektstrukturplan.png)
 
-blue = to verify
-green = done
-orange = in progress
-red = open
+* blue = to verify
+* green = done
+* orange = in progress
+* red = open
 
 ## :arrow_forward: Introduction
  
