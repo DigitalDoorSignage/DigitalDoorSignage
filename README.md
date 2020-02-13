@@ -4,7 +4,7 @@
 - [Introduction](#arrow_forward-introduction)
 - [Documentation](#page_facing_up-documentation)
 - [Contributing](#chart_with_upwards_trend-contributing)
-- [Build with](#wrench-build-with)
+- [Built with](#wrench-build-with)
 - [License](#lock-license)
 
 ## Basic - Layout
@@ -39,7 +39,7 @@ provided us with the esp32 library and a lot of support for connecting the esp32
 
 School: HTL Leonding
 
-## :wrench: Build with:
+## :wrench: Built with:
 - [Webuntis](https://webuntis.com/m)
 - [Mqtt](http://mqtt.org/)
 - [Library for esp32](https://github.com/gkoe/iotsamstag)
