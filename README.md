@@ -1,11 +1,18 @@
 # README - DigitalDoorSignage :pushpin:
 
 ## :clipboard: Table of Contents
-- [Introduction](#arrow_forward-introduction)
-- [Documentation](#page_facing_up-documentation)
-- [Contributing](#chart_with_upwards_trend-contributing)
-- [Built with](#wrench-build-with)
-- [License](#lock-license)
+- [README - DigitalDoorSignage :pushpin:](#readme---digitaldoorsignage-pushpin)
+  - [:clipboard: Table of Contents](#clipboard-table-of-contents)
+  - [Basic - Layout](#basic---layout)
+  - [Projektstrukturplan](#projektstrukturplan)
+  - [Use Case](#use-case)
+  - [:arrow_forward: Introduction](#arrowforward-introduction)
+  - [:page_facing_up: Documentation:](#pagefacingup-documentation)
+  - [:chart_with_upwards_trend: Contributing:](#chartwithupwardstrend-contributing)
+    - [Developers:](#developers)
+    - [G. Koeck](#g-koeck)
+  - [:wrench: Built with:](#wrench-built-with)
+  - [:lock: License:](#lock-license)
 
 ## Basic - Layout
 ![alt text](documents/Systemarchitektur.png)
@@ -18,6 +25,9 @@
 * green = done
 * orange = in progress
 * red = open
+
+## Use Case
+![alt text](documents/usecase.png)
 
 ## :arrow_forward: Introduction
  
