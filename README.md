@@ -26,7 +26,7 @@
 * orange = in progress
 * red = open
 
-## Use Case
+## Usecase
 ![alt text](documents/usecase.png)
 
 ## :arrow_forward: Introduction
